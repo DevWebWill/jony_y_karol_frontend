@@ -16,8 +16,8 @@ export default {
   },
   setup() {
     return {
-      //baseUrl: process.env.VUE_APP_URL_BASE_API,
-      baseUrl: 'http://localhost:3010',
+      baseUrl: import.meta.env.VITE_APP_URL_API,
+      //baseUrl: 'http://localhost:3010',
       modules: [Mousewheel, Pagination],
       dias: 0,
       horas: 0,
