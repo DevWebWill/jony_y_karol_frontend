@@ -13,12 +13,12 @@ services:
   #    - vueapp
 
   app:
-    container_name: app
+    container_name: jonykarol_app
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '8083:80'
+      - '80:80'
     #x-develop:
     #  watch:
     #    - path: ./src/

@@ -307,7 +307,7 @@ export default {
               <div class="relative border h-full border-green-950">
                 <div class="text-left p-2">
                   <div v-for="(guest, index) in guests" :key="index" class="mt-2">
-                    {{ guest.name }} prueba
+                    {{ guest.name }}
                   </div>
                 </div>
               </div>
