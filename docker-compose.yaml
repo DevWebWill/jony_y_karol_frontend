@@ -18,6 +18,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
+      # Cambiar el puerto 8085 por 80 en produccion
       - '80:80'
     #x-develop:
     #  watch:
