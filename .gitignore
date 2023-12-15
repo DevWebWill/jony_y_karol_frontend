@@ -18,6 +18,7 @@ coverage
 /cypress/screenshots/
 
 # local env files
+.env
 .env.local
 .env.*.local
 
