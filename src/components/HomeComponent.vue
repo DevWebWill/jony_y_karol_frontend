@@ -6,13 +6,11 @@ import { Mousewheel, Pagination } from 'swiper/modules';
 import { DateTime } from 'luxon';
 import OurPhotos from './OurPhotos.vue';
 import axios from 'axios';
-/* import OurPhotos2 from './OurPhotos2.vue'; */
 export default {
   components: {
     Swiper,
     SwiperSlide,
-    OurPhotos,
-    /* OurPhotos2 */
+    OurPhotos
   },
   setup() {
     return {
@@ -28,7 +26,7 @@ export default {
       fechaObjetivo: new Date("2024-04-27T10:00:00"),
 
       guests: []
-    };
+    }
   },
   data() {
     return {
@@ -47,6 +45,7 @@ export default {
     }); */
   },
   mounted() {
+
     DateTime.local().setZone("Europe/Madrid");
     setInterval(function () {
       /* const ahora = DateTime.now({ zone: "Europe/Madrid" });
@@ -137,15 +136,31 @@ export default {
       }
   },
   methods: {
-    calcularDiferencia() {
-      
-    },
-  },
+    toggleFullscreen() {
+      var element = document.documentElement;
+
+      if (document.fullscreenElement) {
+        // Si ya estamos en pantalla completa, salir de ella
+        document.exitFullscreen();
+      } else {
+        // De lo contrario, entrar en pantalla completa
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullscreen) {
+          element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) {
+          element.msRequestFullscreen();
+        }
+      }
+    }
+  }
 }
 </script>
 
 <template>
-  <div class="w-full h-full">
+  <div class="w-full h-full" @click="toggleFullscreen">
     <Transition>
       <div v-if="corazon" class="corazon absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
     </Transition>
