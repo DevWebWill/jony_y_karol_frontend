@@ -136,6 +136,20 @@ export default {
       }
   },
   methods: {
+    iWillAttend(id) {
+      let guest = this.guest.find(g => g._id = id);
+      axios({
+          url: this.baseUrl + '/guest/update-guest',
+          method: 'POST',
+          data: { id: id, attendance: guest.attendance },
+          responseType: 'json'
+      }).then((response) => {
+        console.log(response)
+        /* if(response.data && response.data.guests) {
+          this.guests = response.data.guests;
+        } */
+      });
+    }
     /* toggleFullscreen() {
       var element = document.documentElement;
 
@@ -333,8 +347,18 @@ export default {
               <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover" src="@/assets/images/jonyykarol/6.jpg"/>
               <div class="relative border h-full border-green-950">
                 <div class="text-left p-2">
-                  <div v-for="(guest, index) in guests" :key="index" class="mt-2">
-                    {{ guest.name }}
+                  <div class="mt-2 flex items-center justify-between mb-4">
+                    <label class="ms-2 text-sm text-gray-900 font-bold">Nombre</label>
+                    <label class="ms-2 text-sm text-gray-900 font-bold">Asistencia</label>
+                  </div>
+                  <div v-for="(guest, index) in guests" :key="index" class="mt-2 flex items-center justify-between mb-4">
+                    <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900">{{ guest.name }}</label>
+                    <input v-model="guest.attendance" @change="iWillAttend(guest._id)" id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    
+                    <!-- <div class="flex items-center">
+                        <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+                    </div> -->
                   </div>
                 </div>
               </div>
