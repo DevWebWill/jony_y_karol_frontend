@@ -118,10 +118,6 @@ export default {
         console.log("¡Tiempo agotado!");
       }
     }, 1000);
-
-    window.addEventListener('load', function () {
-        this.launchFullScreen();
-    });
   },
   beforeCreate() {
       const params = this.$route.params;
@@ -144,22 +140,12 @@ export default {
     calcularDiferencia() {
       
     },
-    launchFullScreen() {
-        var element = document.documentElement;
-        if (element.requestFullscreen) {
-            element.requestFullscreen();
-        } else if (element.webkitRequestFullscreen) {
-            element.webkitRequestFullscreen();
-        } else if (element.msRequestFullscreen) {
-            element.msRequestFullscreen();
-        }
-    }
   },
 }
 </script>
 
 <template>
-  <div class="w-full h-full">
+  <div class="w-full h-screen">
     <Transition>
       <div v-if="corazon" class="corazon absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
     </Transition>
