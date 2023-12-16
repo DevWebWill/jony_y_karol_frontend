@@ -301,8 +301,8 @@ export default {
 
                 <div class="mt-6 px-2 md:px-32 lg:px-60">
                   <span>
-                    Hay momentos en la vida que son especiales por sí solos. Compartirlos con las personas que quieres, los convierte en inolvidables <span>❤️</span> .
-                    Necesitamos invitados con o sin experiencia para ser contratados como testigos indefinidos. ¡Te esperamos! 🥳 Confirma tu asistencia mas abajo 😁 !!!
+                    Hay momentos en la vida que son especiales por sí solos. Compartirlos con las personas que quieres, los convierte en inolvidables.
+                    Necesitamos invitados con o sin experiencia para ser contratados como testigos. ¡Te esperamos! 😁 Confirma tu asistencia mas abajo !!!
                   </span>
                 </div>
 
