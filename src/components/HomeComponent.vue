@@ -145,7 +145,7 @@ export default {
 </script>
 
 <template>
-  <div class="w-full h-screen">
+  <div class="w-full h-full">
     <Transition>
       <div v-if="corazon" class="corazon absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
     </Transition>
