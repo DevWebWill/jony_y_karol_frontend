@@ -136,7 +136,7 @@ export default {
       }
   },
   methods: {
-    toggleFullscreen() {
+    /* toggleFullscreen() {
       var element = document.documentElement;
 
       if (document.fullscreenElement) {
@@ -154,13 +154,13 @@ export default {
           element.msRequestFullscreen();
         }
       }
-    }
+    } */
   }
 }
 </script>
 
 <template>
-  <div class="w-full h-full" @click="toggleFullscreen">
+  <div class="w-full h-full">
     <Transition>
       <div v-if="corazon" class="corazon absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
     </Transition>
@@ -215,11 +215,7 @@ export default {
                   
                 </div>
                 
-                <div class="arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0958b" class="w-8 h-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </div>
+                
 
                 <div class="content-portada text-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
                   <div class="box-nombres-fecha-portada flex flex-col">
@@ -247,10 +243,16 @@ export default {
                       <span>
                         su esfuerzo.
                       </span> -->
-                      <span class="flex items-end">
+                      <span class="flex items-end mb-8">
                         <!-- <span class="md:mr-1">Si caen, el uno levanta al otro.</span> -->
                         <span class="mr-1">Eclesiastés 4:9</span>
                         <img src="@/assets/images/shape/comilla-cierre.svg" class="w-4 h-4 opacity-50 mb-2" alt="">  
+                      </span>
+
+                      <span class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0958b" class="w-8 h-8">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+                        </svg>
                       </span>
                       
                     </p>
@@ -303,15 +305,20 @@ export default {
                   </span>
                 </div>
 
-                <div class="absolute bottom-5 text-2xl left-1/2 lg:left-auto lg:right-0 -translate-x-1/2 parisiente">
+                <div class="absolute bottom-10 text-2xl left-1/2 md:left-auto md:right-0 -translate-x-1/2 parisiente">
                   <span>
                     Nuestra historia de amor
                   </span>
+                  <div class="arrow  md:hidden mt-4 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0958b" class="w-8 h-8">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
                   <our-photos></our-photos>
                   <!-- <our-photos2></our-photos2> -->
                 </div>
 
-                <div class="arrow">
+                <div class="arrow absolute hidden md:block">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0958b" class="w-8 h-8">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
                   </svg>
@@ -487,7 +494,7 @@ export default {
     
 
     .arrow {
-      position: absolute;
+      /* position: absolute; */
       bottom: 0;
       left: 50%;
       color: #32332d !important;
