@@ -301,8 +301,8 @@ export default {
 
                 <div class="mt-6 px-2 md:px-32 lg:px-60">
                   <span>
-                    Hay momentos en la vida que son especiales por sí solos. Compartirlos con las personas que quieres, los convierte en inolvidables.
-                    Necesitamos invitados con o sin experiencia para ser contratados como testigos indefinidos. ¡Te esperamos! 🥳
+                    Hay momentos en la vida que son especiales por sí solos. Compartirlos con las personas que quieres, los convierte en inolvidables <span>❤️</span> .
+                    Necesitamos invitados con o sin experiencia para ser contratados como testigos indefinidos. ¡Te esperamos! 🥳 Confirma tu asistencia mas abajo 😁 !!!
                   </span>
                 </div>
 
@@ -310,11 +310,11 @@ export default {
                   <span>
                     Nuestra historia de amor
                   </span>
-                  <div class="arrow  md:hidden mt-4 flex justify-center">
+                  <!-- <div class="arrow  md:hidden mt-4 flex justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0958b" class="w-8 h-8">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
                     </svg>
-                  </div>
+                  </div> -->
                   <our-photos></our-photos>
                   <!-- <our-photos2></our-photos2> -->
                 </div>
