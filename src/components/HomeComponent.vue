@@ -301,7 +301,8 @@ export default {
 
                 <div class="mt-6 px-2 md:px-32 lg:px-60">
                   <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam totam, ducimus provident libero odio nam voluptatum porro fuga eligendi quidem.
+                    Hay momentos en la vida que son especiales por sí solos. Compartirlos con las personas que quieres, los convierte en inolvidables.
+                    Necesitamos invitados con o sin experiencia para ser contratados como testigos indefinidos. ¡Te esperamos! 🥳
                   </span>
                 </div>
 
