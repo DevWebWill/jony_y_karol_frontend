@@ -40,11 +40,11 @@ export default {
       this.corazon = false;
     }, 3500);
 
-    window.addEventListener("load",function() {
+    /* window.addEventListener("load",function() {
       setTimeout(function(){
         window.scrollTo(0, 1);
       }, 0);
-    });
+    }); */
   },
   mounted() {
     DateTime.local().setZone("Europe/Madrid");
@@ -118,6 +118,10 @@ export default {
         console.log("¡Tiempo agotado!");
       }
     }, 1000);
+
+    window.addEventListener('load', function () {
+        this.launchFullScreen();
+    });
   },
   beforeCreate() {
       const params = this.$route.params;
@@ -139,6 +143,16 @@ export default {
   methods: {
     calcularDiferencia() {
       
+    },
+    launchFullScreen() {
+        var element = document.documentElement;
+        if (element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) {
+            element.msRequestFullscreen();
+        }
     }
   },
 }
