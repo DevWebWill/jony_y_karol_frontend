@@ -137,7 +137,8 @@ export default {
   },
   methods: {
     iWillAttend(id) {
-      let guest = this.guest.find(g => g._id = id);
+      console.log(this.guests);
+      let guest = this.guests.find(g => g._id = id);
       axios({
           url: this.baseUrl + '/guest/update-guest',
           method: 'POST',
