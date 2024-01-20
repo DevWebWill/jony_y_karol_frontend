@@ -4332,11 +4332,11 @@
 			</g>
 			<g>
 				
-					<text id="karolFont" class="parisiente" transform="matrix(1 0 0 1 150.8256 170.4761)" style="fill:#7A6753; font-family:'Alex Brush', cursive; font-size:52px;" font-family="'Alex Brush', cursive">Karol</text>
+					<text transform="matrix(1 0 0 1 150.8256 170.4761)" style="fill:#7A6753; font-family:'Alex Brush', cursive; font-size:52px;" font-family="'Alex Brush', cursive">Karol</text>
 			</g>
 			<g>
 				
-					<text class="parisiente" transform="matrix(1 0 0 1 250.6547 250.8857)" style="fill:#7A6753; font-family:'Alex Brush', cursive; font-size:52px;">Jony</text>
+					<text transform="matrix(1 0 0 1 250.6547 250.8857)" style="fill:#7A6753; font-family:'Alex Brush', cursive; font-size:52px;">Jony</text>
 			</g>
 			<g>
 				<text transform="matrix(1 0 0 1 234.2763 206.2769)" style="font-family:'Alex Brush', cursive; font-size:38px;">&amp;</text>
