@@ -6,7 +6,6 @@ import { Mousewheel, Pagination } from 'swiper/modules';
 import { DateTime } from 'luxon';
 import OurPhotos from './OurPhotos.vue';
 import axios from 'axios';
-import { nextTick } from 'vue';
 export default {
   components: {
     Swiper,
@@ -231,25 +230,27 @@ export default {
                   
                 </div>
                 
-                
+                <div class="content-portada text-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full">
+                  <!-- <div class="box-nombres-fecha-portada absolute flex flex-col w-full justify-center -top-18"> -->
+                    <!-- <span class="fecha">
+                      {{ fechaObjetivo.getDate() }} - {{ fechaObjetivo.getMonth() + 1 }} - {{ fechaObjetivo.getFullYear() }}          
+                    </span> -->
+                    <h1 class="parisiente text-2xl green-olivo flex flex-col mb-9">
+                      <span>Jonathan</span>
+                      <!-- <br class="d-md-none"> -->
+                      <span class="">&amp;</span>
+                      <!-- <br class="d-md-none"> -->
+                      <span>Karol</span>          
+                    </h1>
+                  <!-- </div> -->
+                </div>
 
                 <div class="content-portada text-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full">
                   <img alt="Shape" class="top-20 mt-40 w-full md:w-12 md:h-12" src="@/assets/images/shape/marco.svg"/>
-                  <!-- <div class="box-nombres-fecha-portada flex flex-col">
-                    <span class="fecha">
-                      {{ fechaObjetivo.getDate() }} - {{ fechaObjetivo.getMonth() + 1 }} - {{ fechaObjetivo.getFullYear() }}          
-                    </span>
-                    <h1 class="parisiente border-t border-b inline p-4 mt-2 mb-4 text-5xl bo-pink green-olivo2">
-                      Jonathan
-                      <br class="d-md-none">
-                      <span class="">&amp;</span>
-                      <br class="d-md-none">
-                      Karol          
-                    </h1>
-                  </div> -->
+                  
 
                   <div class="box-frase-portada">
-                    <p class="flex flex-col justify-center items-center marcellus green-olivo2">
+                    <p class="flex flex-col justify-center items-center marcellus green-olivo">
                       <span class="flex">
                         <img src="@/assets/images/shape/comilla-apertura.svg" class="w-4 h-4 opacity-50" alt="">
                         <span class="ml-1">Más valen dos que uno...</span>
@@ -487,7 +488,7 @@ export default {
 }
 
 .green-olivo {
-  color: #4e5143 !important;
+  color: #474e2c !important;
 }
 
 .green-olivo2 {
@@ -543,5 +544,6 @@ export default {
     .parisiente {
       font-family: 'Parsiente', cursive;
     }
+
 </style>
 
