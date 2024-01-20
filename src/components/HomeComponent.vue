@@ -235,12 +235,12 @@ export default {
                     <!-- <span class="fecha">
                       {{ fechaObjetivo.getDate() }} - {{ fechaObjetivo.getMonth() + 1 }} - {{ fechaObjetivo.getFullYear() }}          
                     </span> -->
-                    <h1 class="parisiente text-2xl green-olivo flex flex-col mb-9">
-                      <span>Jonathan</span>
+                    <h1 class="parisiente text-2xl green-olivo flex flex-col mb-9 gap-0">
+                      <span class="p-0 m-0 leading-none">Jonathan</span>
                       <!-- <br class="d-md-none"> -->
-                      <span class="">&amp;</span>
+                      <span class="p-0 m-0 leading-none">&amp;</span>
                       <!-- <br class="d-md-none"> -->
-                      <span>Karol</span>          
+                      <span class="p-0 m-0 leading-none">Karol</span>          
                     </h1>
                   <!-- </div> -->
                 </div>
