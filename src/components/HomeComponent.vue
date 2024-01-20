@@ -6,6 +6,7 @@ import { Mousewheel, Pagination } from 'swiper/modules';
 import { DateTime } from 'luxon';
 import OurPhotos from './OurPhotos.vue';
 import axios from 'axios';
+import { nextTick } from 'vue';
 export default {
   components: {
     Swiper,

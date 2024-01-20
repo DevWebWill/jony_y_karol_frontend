@@ -4332,7 +4332,7 @@
 			</g>
 			<g>
 				
-					<text class="parisiente" transform="matrix(1 0 0 1 150.8256 170.4761)" style="fill:#7A6753; font-family:'Alex Brush', cursive; font-size:52px;">Karol</text>
+					<text id="karolFont" class="parisiente" transform="matrix(1 0 0 1 150.8256 170.4761)" style="fill:#7A6753; font-family:'Alex Brush', cursive; font-size:52px;" font-family="'Alex Brush', cursive">Karol</text>
 			</g>
 			<g>
 				
