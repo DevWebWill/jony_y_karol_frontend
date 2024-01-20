@@ -232,8 +232,9 @@ export default {
                 
                 
 
-                <div class="content-portada text-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-                  <div class="box-nombres-fecha-portada flex flex-col">
+                <div class="content-portada text-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full">
+                  <img alt="Shape" class="top-20 mt-40 w-full md:w-12 md:h-12" src="@/assets/images/shape/marco.svg"/>
+                  <!-- <div class="box-nombres-fecha-portada flex flex-col">
                     <span class="fecha">
                       {{ fechaObjetivo.getDate() }} - {{ fechaObjetivo.getMonth() + 1 }} - {{ fechaObjetivo.getFullYear() }}          
                     </span>
@@ -244,7 +245,7 @@ export default {
                       <br class="d-md-none">
                       Karol          
                     </h1>
-                  </div>
+                  </div> -->
 
                   <div class="box-frase-portada">
                     <p class="flex flex-col justify-center items-center marcellus green-olivo2">
