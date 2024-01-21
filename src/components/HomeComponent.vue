@@ -312,7 +312,7 @@ export default {
           </swiper-slide>
           <swiper-slide>
             <div class="color-dcdee5 w-full h-full p-8">
-              <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover" src="@/assets/images/jonyykarol/6.jpg"/>
+              <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover" src="@/assets/images/jonyykarol/6a.jpg"/>
               <div class="relative border h-full border-green-950">
                 
                 <img alt="Shape" class="absolute -left-8 -top-8" src="@/assets/images/shape/ban-shape-four.png" width="125" height="125" />
@@ -324,18 +324,12 @@ export default {
                   </span>
                 </div>
 
-                <div class="absolute bottom-10 text-2xl left-1/2 md:left-auto md:right-0 -translate-x-1/2 parisiente">
+                <!-- <div class="absolute bottom-10 text-2xl left-1/2 md:left-auto md:right-0 -translate-x-1/2 parisiente">
                   <span>
                     Nuestra historia de amor
                   </span>
-                  <!-- <div class="arrow  md:hidden mt-4 flex justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0958b" class="w-8 h-8">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
-                    </svg>
-                  </div> -->
                   <our-photos></our-photos>
-                  <!-- <our-photos2></our-photos2> -->
-                </div>
+                </div> -->
 
                 <div class="arrow absolute hidden md:block">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f0958b" class="w-8 h-8">
