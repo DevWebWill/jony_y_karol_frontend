@@ -4,13 +4,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Mousewheel, Pagination } from 'swiper/modules';
 import { DateTime } from 'luxon';
-import OurPhotos from './OurPhotos.vue';
+//import OurPhotos from './OurPhotos.vue';
 import axios from 'axios';
 export default {
   components: {
     Swiper,
     SwiperSlide,
-    OurPhotos
+    //OurPhotos
   },
   setup() {
     return {
@@ -230,23 +230,16 @@ export default {
                   
                 </div>
                 
-                <div class="content-portada text-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full">
-                  <!-- <div class="box-nombres-fecha-portada absolute flex flex-col w-full justify-center -top-18"> -->
-                    <!-- <span class="fecha">
-                      {{ fechaObjetivo.getDate() }} - {{ fechaObjetivo.getMonth() + 1 }} - {{ fechaObjetivo.getFullYear() }}          
-                    </span> -->
+                <!-- <div class="content-portada text-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full">
                     <h1 class="parisiente text-2xl green-olivo flex flex-col mb-9 gap-0">
                       <span class="p-0 m-0 leading-none">Jonathan</span>
-                      <!-- <br class="d-md-none"> -->
                       <span class="p-0 m-0 leading-none">&amp;</span>
-                      <!-- <br class="d-md-none"> -->
                       <span class="p-0 m-0 leading-none">Karol</span>          
                     </h1>
-                  <!-- </div> -->
-                </div>
+                </div> -->
 
                 <div class="content-portada text-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full">
-                  <img alt="Shape" class="top-20 mt-40 w-full md:w-12 md:h-12" src="@/assets/images/shape/marco.svg"/>
+                  <img alt="Shape" class="top-20 mt-40 w-full md:w-12 md:h-12" src="@/assets/images/shape/marcook.png"/>
                   
 
                   <div class="box-frase-portada">
@@ -317,11 +310,27 @@ export default {
                 
                 <img alt="Shape" class="absolute -left-8 -top-8" src="@/assets/images/shape/ban-shape-four.png" width="125" height="125" />
 
-                <div class="mt-6 px-2 md:px-32 lg:px-60">
-                  <span>
-                    Hay momentos en la vida que son especiales por sí solos. Compartirlos con las personas que quieres, los convierte en inolvidables.
-                    Necesitamos invitados con o sin experiencia para ser contratados como testigos. ¡Te esperamos! 😁 Confirma tu asistencia mas abajo !!!
+                <div class="mt-6 px-2 md:px-32 lg:px-60 marcellus green-olivo">
+                  <span class="">
+                      Estamos muy emocionados de poder celebrar este día junto a ti. 
+                      Queremos empezar esta nueva aventura, rodeados de las personas que más amamos y aquellos amigos que han sembrado tanto en nuestras vidas. 
+                      Esta es una invitación especial para ti y tu familia. 
                   </span>
+                  <div>¡Ya falta poco! </div>
+                  <div>Esperamos tu confirmación.</div>
+                  <div>¡Te amamos!</div>
+                  <hr class="my-4">
+                  <div class="font-semibold">
+                    TU&ME Resort
+                  </div>
+                  <div>
+                    Carretera Camí de la Sèquia del Rei s/n  Km 1. CP. 46730 - Gandía
+                  </div>
+                  <div class="relative mt-6">
+                    <div class="border rounded p-1 px-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" style="color: rgb(229, 204, 208);">
+                      <a href="https://www.google.es/maps/place/TU%26ME+Resort/@38.9954335,-0.1774899,17.02z/data=!4m20!1m10!3m9!1s0xd61c29a54f572c3:0x25b8eb9f1feed91c!2sTU%26ME+Resort!5m2!4m1!1i2!8m2!3d38.9954312!4d-0.1748761!16s%2Fg%2F11f5d97rvg!3m8!1s0xd61c29a54f572c3:0x25b8eb9f1feed91c!5m2!4m1!1i2!8m2!3d38.9954312!4d-0.1748761!16s%2Fg%2F11f5d97rvg?entry=ttu">Enlace a ubicación</a>
+                    </div>
+                  </div>
                 </div>
 
                 <!-- <div class="absolute bottom-10 text-2xl left-1/2 md:left-auto md:right-0 -translate-x-1/2 parisiente">

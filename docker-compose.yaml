@@ -27,3 +27,9 @@ services:
     #      action: sync
 
 
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ../certificado_ssl/etc-letsencrypt:/etc/letsencrypt
+      - ../certificado_ssl/var-lib-letsencrypt:/var/lib/letsencrypt
+      - ../certificado_ssl/var-log-letsencrypt:/var/log/letsencrypt
