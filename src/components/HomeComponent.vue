@@ -137,19 +137,23 @@ export default {
   },
   methods: {
     iWillAttend(id) {
-      console.log(this.guests);
-      let guest = this.guests.find(g => g._id = id);
-      axios({
-          url: this.baseUrl + '/guest/update-guest',
-          method: 'POST',
-          data: { id: id, attendance: guest.attendance },
-          responseType: 'json'
-      }).then((response) => {
-        console.log(response)
-        /* if(response.data && response.data.guests) {
-          this.guests = response.data.guests;
-        } */
-      });
+      setTimeout(() => {
+        console.log(JSON.stringify(this.guests));
+        let guest = this.guests.find(g => g._id === id);
+        console.log(JSON.stringify(guest));
+        axios({
+            url: this.baseUrl + '/guest/update-guest',
+            method: 'POST',
+            data: { id: id, attendance: guest.attendance },
+            responseType: 'json'
+        }).then((response) => {
+          console.log(response)
+          /* if(response.data && response.data.guests) {
+            this.guests = response.data.guests;
+          } */
+        });
+      }, 1000);
+      
     }
     /* toggleFullscreen() {
       var element = document.documentElement;
@@ -305,7 +309,7 @@ export default {
           </swiper-slide>
           <swiper-slide>
             <div class="color-dcdee5 w-full h-full p-8">
-              <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover" src="@/assets/images/jonyykarol/6a.jpg"/>
+              <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover" src="@/assets/images/jonyykarol/prueba3.jpg"/>
               <div class="relative border h-full border-green-950">
                 
                 <img alt="Shape" class="absolute -left-8 -top-8" src="@/assets/images/shape/ban-shape-four.png" width="125" height="125" />
@@ -327,7 +331,7 @@ export default {
                     Carretera Camí de la Sèquia del Rei s/n  Km 1. CP. 46730 - Gandía
                   </div>
                   <div class="relative mt-6">
-                    <div class="border rounded p-1 px-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" style="color: rgb(229, 204, 208);">
+                    <div class="border rounded p-1 px-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 green-olivo">
                       <a href="https://www.google.es/maps/place/TU%26ME+Resort/@38.9954335,-0.1774899,17.02z/data=!4m20!1m10!3m9!1s0xd61c29a54f572c3:0x25b8eb9f1feed91c!2sTU%26ME+Resort!5m2!4m1!1i2!8m2!3d38.9954312!4d-0.1748761!16s%2Fg%2F11f5d97rvg!3m8!1s0xd61c29a54f572c3:0x25b8eb9f1feed91c!5m2!4m1!1i2!8m2!3d38.9954312!4d-0.1748761!16s%2Fg%2F11f5d97rvg?entry=ttu">Enlace a ubicación</a>
                     </div>
                   </div>
@@ -352,20 +356,32 @@ export default {
           <swiper-slide>
             <div class="color-ecf1ff w-full h-full p-8">
               <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover" src="@/assets/images/jonyykarol/6.jpg"/>
-              <div class="relative border h-full border-green-950">
+              <div class="relative border h-full border-green-950 flex flex-col justify-between">
                 <div class="text-left p-2">
                   <div class="mt-2 flex items-center justify-between mb-4">
-                    <label class="ms-2 text-sm text-gray-900 font-bold">Nombre</label>
-                    <label class="ms-2 text-sm text-gray-900 font-bold">Asistencia</label>
+                    <label class="ms-2 text-sm text-gray-900 font-bold green-olivo">Nombre</label>
+                    <label class="ms-2 text-sm text-gray-900 font-bold green-olivo">Asistencia</label>
                   </div>
                   <div v-for="(guest, index) in guests" :key="index" class="mt-2 flex items-center justify-between mb-4">
-                    <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900">{{ guest.name }}</label>
+                    <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 green-olivo">{{ guest.name }}</label>
                     <input v-model="guest.attendance" @change="iWillAttend(guest._id)" id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     
                     <!-- <div class="flex items-center">
                         <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                         <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
                     </div> -->
+                  </div>
+                </div>
+                <div class="text-left marcellus pl-2 green-olivo">
+                  <div>
+                    <span class="font-semibold">Número de cuenta:</span>
+                    <div>ES10 2100 4475 1501 0033 8140</div>
+                  </div>
+                  <div>
+                    <span class="font-semibold">Destinatario:</span> Boda Karol y Jona
+                  </div>
+                  <div>
+                    <span class="font-semibold">Concepto:</span> Ap ellidos y Nombre
                   </div>
                 </div>
               </div>
