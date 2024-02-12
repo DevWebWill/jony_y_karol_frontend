@@ -2,11 +2,11 @@
     <div>
         <Transition>
             <div v-if="showModal" tabindex="-1"  role="dialog" aria-modal="true" class="bg-black/[0.4] overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-40 w-full md:inset-0 h-full justify-center items-center flex">
-                <div class="relative  w-full max-w-5xl h-[90%]">
+                <div class="relative  w-full max-w-md h-72">
                     <!-- Modal content -->
                     <div class="relative bg-white rounded-lg shadow modal-fade-up h-full">
                         <form @submit.prevent="submit" action="" class="flex flex-col justify-between items-stretch h-full">
-                            <div class="flex justify-between items-center px-6 rounded-t border-b dark:border-gray-600 h-[6%]">
+                            <div class="flex justify-between items-center px-6 rounded-t border-b dark:border-gray-600 h-16 py-2">
                                 <h3 class="text-xl font-semibold text-gray-900">
                                     <span>
                                         Nuevo invitado
@@ -19,8 +19,19 @@
 
                         
                             <!-- Modal body -->
-                            <div class="grid grid-cols-12 p-6 gap-4 bg-slate-100 h-[90%] overflow-y-auto">
-                                
+                            <div class="grid grid-cols-1 p-6 gap-4 bg-slate-100 h-[90%] overflow-y-auto w-full">
+                                <div class="w-full">
+                                    <div class="relative h-10 w-full">
+                                        <input v-model="form.name" type="text" placeholder="Nombre" class="peer h-full w-full rounded-[7px]  !border  !border-gray-300 border-t-transparent bg-transparent bg-white px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700  shadow-lg shadow-gray-900/5 outline outline-0 ring-4 ring-transparent transition-all placeholder:text-gray-500 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2  focus:!border-gray-900 focus:border-t-transparent focus:!border-t-gray-900 focus:outline-0 focus:ring-gray-900/10 disabled:border-0 disabled:bg-blue-gray-50" />
+                                        <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5  hidden h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"></label>
+                                    </div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="relative h-10 w-full">
+                                        <input v-model="form.slug" type="text" placeholder="Slug" class="peer h-full w-full rounded-[7px]  !border  !border-gray-300 border-t-transparent bg-transparent bg-white px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700  shadow-lg shadow-gray-900/5 outline outline-0 ring-4 ring-transparent transition-all placeholder:text-gray-500 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2  focus:!border-gray-900 focus:border-t-transparent focus:!border-t-gray-900 focus:outline-0 focus:ring-gray-900/10 disabled:border-0 disabled:bg-blue-gray-50" />
+                                        <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5  hidden h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"></label>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Modal footer -->
@@ -55,13 +66,16 @@
             return {
                 baseUrl: import.meta.env.VITE_APP_URL_API,
                 form: {
-                    
+                    name: '',
+                    slug: ''
                 }
             }
         },
         methods: {
             cleanForm() {
-                
+                this.form.name = ''
+                this.form.slug = ''
+                this.closeModal()
             },
             closeModalOnEscape(event) {
                 if (event.key === 'Escape') {
@@ -72,21 +86,16 @@
                 this.$emit('close-modal');
             },
             submit() {
-                
                 axios({
-                    url: this.baseUrl + '/guest/create',
+                    url: this.baseUrl + '/guest/create-guest',
                     method: 'POST',
                     data: this.form,
                     responseType: 'json'
                 }).then((response) => {
                     if(response.data) {
-                        let data = response.data;
-                        let json = JSON.parse(data.data)
-                        
-                        let val = parseInt(json)
-                        if(val != undefined && val != null && val > -1) {
-                            console.log("Datos insertados")
-                        }
+                        console.log(response.data)
+                        this.$emit('refresh-table')
+                        this.$emit('close-modal')
                     }
                     this.closeModal();
                     //this.$emit('refreshTable');
