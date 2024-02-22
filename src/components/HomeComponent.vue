@@ -23,7 +23,7 @@ export default {
       segundos: 0,
 
       pruebaDate: null,
-      fechaObjetivo: new Date("2024-04-27T10:00:00"),
+      fechaObjetivo: new Date("2024-04-27T12:30:00"),
 
       guests: []
     }
@@ -53,7 +53,7 @@ export default {
       this.fechaObjetivoTime = this.fechaObjetivo.getTime();
       const tiempoRestante = this.fechaObjetivoTime - ahora; */
 
-      const fechaObjetivo = new Date('2024-04-27T10:00:00');
+      const fechaObjetivo = new Date('2024-04-27T12:30:00');
       
       const fechaActual = DateTime.now();
 
@@ -188,18 +188,18 @@ export default {
         <swiper :direction="'vertical'" :slidesPerView="1" :spaceBetween="0" :mousewheel="true" :modules="modules"
           class="mySwiper">
           <swiper-slide>
-            <div class="color-ecf1ff w-full h-full p-8">
+            <div class="color-ecf1ff w-full h-full py-5">
               <!-- <div class="absolute top-0 left-0 w-full h-full"> -->
-                <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover object-center hidden lg:block lg:scale-150" src="@/assets/images/jonyykarol/3.jpg"/>
+                <!-- <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover object-center hidden lg:block lg:scale-150" src="@/assets/images/jonyykarol/3.jpg"/> -->
                 <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover object-center lg:hidden" src="@/assets/images/jonyykarol/5.jpg"/>
               <!-- </div> -->
-              
-              <div class="relative border h-full border-green-950">
-                <img alt="Shape" class="absolute -left-8 -top-8" src="@/assets/images/shape/ban-shape-four.png" width="125" height="125" />
-
+              <!-- border-green-950 -->
+              <div class="relative h-full">
+                <!-- <img alt="Shape" class="absolute -left-8 -top-8" src="@/assets/images/shape/ban-shape-four.png" width="125" height="125" /> -->
+                <img alt="Shape" class="w-full h-full" src="@/assets/images/shape/marcohome.png"/>
                 
 
-                <div id="cuenta-regresiva" class="absolute left-1/2 top-5 transform -translate-x-1/2 lg:left-16 lg:-translate-x-0 z-20 flex flex-row gap-1 md:gap-8 marcellus green-olivo">
+                <div id="cuenta-regresiva" class="ml-2 absolute left-1/2 top-12 transform -translate-x-1/2 lg:left-16 lg:-translate-x-0 z-20 flex flex-row gap-1 md:gap-8 marcellus green-olivo">
                   <div class="flex flex-col">
                     <span class="text-xl md:text-5xl" id="dias">{{ dias }}</span>
                     <span class="text-xs">Días</span>
@@ -243,23 +243,16 @@ export default {
                 </div> -->
 
                 <div class="content-portada text-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full">
-                  <img alt="Shape" class="top-20 mt-40 w-full md:w-12 md:h-12" src="@/assets/images/shape/marcook.png"/>
+                  <!-- <img alt="Shape" class="top-20 mt-40 w-full md:w-12 md:h-12" src="@/assets/images/shape/marcook.png"/> -->
                   
 
-                  <div class="box-frase-portada">
+                  <!-- <div class="box-frase-portada">
                     <p class="flex flex-col justify-center items-center marcellus green-olivo">
                       <span class="flex">
                         <img src="@/assets/images/shape/comilla-apertura.svg" class="w-4 h-4 opacity-50" alt="">
                         <span class="ml-1">Más valen dos que uno...</span>
                       </span>
-                      <!-- <span>
-                        porque obtienen más fruto de 
-                      </span>
-                      <span>
-                        su esfuerzo.
-                      </span> -->
                       <span class="flex items-end mb-8">
-                        <!-- <span class="md:mr-1">Si caen, el uno levanta al otro.</span> -->
                         <span class="mr-1">Eclesiastés 4:9</span>
                         <img src="@/assets/images/shape/comilla-cierre.svg" class="w-4 h-4 opacity-50 mb-2" alt="">  
                       </span>
@@ -269,9 +262,8 @@ export default {
                           <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
                         </svg>
                       </span>
-                      
                     </p>
-                  </div>
+                  </div> -->
 
                 </div>
                 
@@ -308,13 +300,13 @@ export default {
             </div>
           </swiper-slide>
           <swiper-slide>
-            <div class="color-dcdee5 w-full h-full p-8">
+            <div class="color-dcdee5 w-full h-full py-4">
               <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover" src="@/assets/images/jonyykarol/prueba3.jpg"/>
-              <div class="relative border h-full border-green-950">
-                
-                <img alt="Shape" class="absolute -left-8 -top-8" src="@/assets/images/shape/ban-shape-four.png" width="125" height="125" />
+              <div class="relative  h-full ">
+                <img alt="Shape" class="absolute w-full h-full" src="@/assets/images/shape/marcofull.png"/>
+                <!-- <img alt="Shape" class="absolute -left-8 -top-8" src="@/assets/images/shape/ban-shape-four.png" width="125" height="125" /> -->
 
-                <div class="mt-6 px-2 md:px-32 lg:px-60 marcellus green-olivo">
+                <div class="top-14 absolute px-14 md:px-32 lg:px-60 marcellus green-olivo">
                   <span class="">
                       Estamos muy emocionados de poder celebrar este día junto a ti. 
                       Queremos empezar esta nueva aventura, rodeados de las personas que más amamos y aquellos amigos que han sembrado tanto en nuestras vidas. 
@@ -323,7 +315,7 @@ export default {
                   <div>¡Ya falta poco! </div>
                   <div>Esperamos tu confirmación.</div>
                   <div>¡Te amamos!</div>
-                  <hr class="my-4">
+                  <div class="my-4 border-b-[0.5px] border-red-200"></div>
                   <div class="font-semibold">
                     TU&ME Resort
                   </div>
@@ -331,7 +323,7 @@ export default {
                     Carretera Camí de la Sèquia del Rei s/n  Km 1. CP. 46730 - Gandía
                   </div>
                   <div class="relative mt-6">
-                    <div class="border rounded p-1 px-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 green-olivo">
+                    <div class="border border-red-200 rounded p-1 px-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 green-olivo">
                       <a href="https://www.google.es/maps/place/TU%26ME+Resort/@38.9954335,-0.1774899,17.02z/data=!4m20!1m10!3m9!1s0xd61c29a54f572c3:0x25b8eb9f1feed91c!2sTU%26ME+Resort!5m2!4m1!1i2!8m2!3d38.9954312!4d-0.1748761!16s%2Fg%2F11f5d97rvg!3m8!1s0xd61c29a54f572c3:0x25b8eb9f1feed91c!5m2!4m1!1i2!8m2!3d38.9954312!4d-0.1748761!16s%2Fg%2F11f5d97rvg?entry=ttu">Enlace a ubicación</a>
                     </div>
                   </div>
@@ -354,25 +346,35 @@ export default {
             </div>
           </swiper-slide>
           <swiper-slide>
-            <div class="color-ecf1ff w-full h-full p-8">
+            <div class="color-ecf1ff w-full h-full py-4">
               <img alt="Shape" class="absolute top-0 left-0 w-full h-full opacity-70 object-cover" src="@/assets/images/jonyykarol/6.jpg"/>
-              <div class="relative border h-full border-green-950 flex flex-col justify-between">
-                <div class="text-left p-2">
-                  <div class="mt-2 flex items-center justify-between mb-4">
-                    <label class="ms-2 text-sm text-gray-900 font-bold green-olivo">Nombre</label>
-                    <label class="ms-2 text-sm text-gray-900 font-bold green-olivo">Asistencia</label>
-                  </div>
-                  <div v-for="(guest, index) in guests" :key="index" class="mt-2 flex items-center justify-between mb-4">
-                    <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 green-olivo">{{ guest.name }}</label>
-                    <input v-model="guest.attendance" @change="iWillAttend(guest._id)" id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    
-                    <!-- <div class="flex items-center">
-                        <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
-                    </div> -->
-                  </div>
+              <div class="relative  h-full  flex flex-col justify-between">
+                <img alt="Shape" class="absolute w-full h-full" src="@/assets/images/shape/marcofull.png"/>
+
+                <div class="text-left top-14 absolute w-full px-14">
+                    <div class="w-full flex justify-center mb-2">
+                      <span class="green-olivo text-center text-sm w-full">Marque la casilla para confirmar asistencia.</span>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between mb-4">
+                      <label class="ms-2 text-sm text-gray-900 font-bold green-olivo">Nombre</label>
+                      <label class="ms-2 text-sm text-gray-900 font-bold green-olivo">Asistencia</label>
+                    </div>
+                    <div v-for="(guest, index) in guests" :key="index" class="mt-2 flex items-center justify-between mb-4">
+                      <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 green-olivo">{{ guest.name }}</label>
+                      <input v-model="guest.attendance" @change="iWillAttend(guest._id)" id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                      
+                      <!-- <div class="flex items-center">
+                          <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                          <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+                      </div> -->
+                    </div>
                 </div>
-                <div class="text-left marcellus pl-2 green-olivo">
+
+                <div class="text-left marcellus green-olivo absolute bottom-14 px-14">
+                  <div>
+                    <span class="font-semibold">Precio:</span>
+                    80 Є
+                  </div>
                   <div>
                     <span class="font-semibold">Número de cuenta:</span>
                     <div>ES10 2100 4475 1501 0033 8140</div>
@@ -381,7 +383,7 @@ export default {
                     <span class="font-semibold">Destinatario:</span> Boda Karol y Jona
                   </div>
                   <div>
-                    <span class="font-semibold">Concepto:</span> Ap ellidos y Nombre
+                    <span class="font-semibold">Concepto:</span> Apellidos y Nombre
                   </div>
                 </div>
               </div>
