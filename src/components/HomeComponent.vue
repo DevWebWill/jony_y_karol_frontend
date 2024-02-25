@@ -370,11 +370,19 @@ export default {
                     </div>
                 </div>
 
-                <div class="text-left marcellus green-olivo absolute bottom-14 px-14">
+                <div class="text-left marcellus green-olivo absolute bottom-20 px-14">
                   <div>
                     <span class="font-semibold">Precio:</span>
                     80 Є
                   </div>
+                  <div>
+                    No incluidos niños, excepto si está en la lista
+                  </div>
+                  <div>
+                    <span class="font-semibold">Fecha límite de pago:</span>
+                    Domingo, 7 de abril
+                  </div>
+                  
                   <div>
                     <span class="font-semibold">Número de cuenta:</span>
                     <div>ES10 2100 4475 1501 0033 8140</div>
